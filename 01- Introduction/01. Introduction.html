@@ -6,15 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>JavaScript Introduction</h2>
+    <h1>JavaScript Introduction</h1>
+    <h3>Using Function Call method:</h3>
     <p id="demo">A paragraph</p>
-    <button type="button" onclick="myFunction()">Click 1</button>
-    <button type="button" onclick="myFunction2()">Click 2</button>
-    <button type="button" onclick="myFunction3()">Click 3</button>
+    <button type="button" onclick="myFunction()">innerHTML</button>
+    <button type="button" onclick="myFunction2()">document.writ</button>
+    <button type="button" onclick="myFunction3()">Alert</button>
 
-    <button type="button" onclick="window.alert('Alert working')">Click 4 for alert</button>
+    <h3>Without Function Call method:</h3>
+    <p id="demo2">A paragraph</p>
+    <button type="button" onclick='document.getElementById("demo2").innerHTML = "After Click 1- innerHTML() working"'>innerHTML</button>
+    <button type="button" onclick='document.write("After Click 2- document.write() working.")'>document.write</button>
+    <button type="button" onclick="window.alert('After Click 3- Alert working')">Alert</button>
+    <button type="button" onclick="window.print()">Print</button>
 
-    
+
     <script src="./01. Introduction.js"></script>
 </body>
 </html>
