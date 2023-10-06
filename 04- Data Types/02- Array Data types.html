@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Data Types</title>
+</head>
+<body>
+    <h2>JavaScript Arrays:</h2>
+    <p>Array indexes are zero-based, which means the first item is [2].</p>
+    <p id="array"></p>
+    <p id="array2"></p>
+    <p id="array3"></p>
+    <p id="array4"></p>
+    <script>
+        //Array Declaration-1
+        {
+            const programming = [
+            "C++",
+            "JavaScript",
+            "Python",
+            "Java"
+            ];
+            document.getElementById("array").innerHTML = programming[2];
+        }
+        //Array Declaration-2
+        {
+            const programming = ["C++","JavaScript","Python","Java"]
+            document.getElementById("array2").innerHTML = programming[0];
+        }
+        //Array Declaration-3
+        {
+            const programming = new Array("Node JS", "Flask", "EEL")
+            document.getElementById("array3").innerHTML = programming[0];
+        }
+        //Array element change
+        {
+            const programming = new Array("Node JS", "Flask", "EEL");
+            const programming2 = programming;
+            programming2[1] = "Django";
+            document.getElementById("array4").innerHTML ="Before Change: " +programming+ "<br>"+ "After Change: " + programming2;
+        }
+    </script>
+    
+</body>
+</html>
