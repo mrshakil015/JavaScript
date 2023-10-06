@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Operators Example</title>
+</head>
+<body>
+    <h1>JavaScript Operators Example</h1>
+    
+    <h2>Arithmetic operators:</h2>
+    <p id="addition"></p>
+    <p id="subtraction"></p>
+    <p id="multiplication"></p>
+    <p id="division"></p>
+    <p id="modulus"></p>
+    
+    <p>Comparison operators:</p>
+    <p id="isEqual"></p>
+    <p id="isNotEqual"></p>
+    <p id="isGreaterThan"></p>
+    <p id="isLessThan"></p>
+    <p id="isGreaterOrEqual"></p>
+    <p id="isLessOrEqual"></p>
+    
+    <h2>Logical operators:</h2>
+    <p id="andOperator"></p>
+    <p id="orOperator"></p>
+    <p id="notOperator"></p>
+    
+    <h2>Assignment operators:</h2>
+    <p id="assignment"></p>
+    
+    <h2>Other operators:</h2>
+    <p id="concatOperator"></p>
+    <p id="ternaryOperator"></p>
+
+    <script>
+        // JavaScript code goes here
+        // Arithmetic operators
+        let num1 = 10;
+        let num2 = 5;
+
+        let addition = num1 + num2;
+        let subtraction = num1 - num2;
+        let multiplication = num1 * num2;
+        let division = num1 / num2;
+        let modulus = num1 % num2;
+
+        document.getElementById('addition').innerText = `Addition: ${addition}`;
+        document.getElementById('subtraction').innerText = `Subtraction: ${subtraction}`;
+        document.getElementById('multiplication').innerText = `Multiplication: ${multiplication}`;
+        document.getElementById('division').innerText = `Division: ${division}`;
+        document.getElementById('modulus').innerText = `Modulus: ${modulus}`;
+
+        // Comparison operators
+        let isEqual = num1 == num2;
+        let isNotEqual = num1 != num2;
+        let isGreaterThan = num1 > num2;
+        let isLessThan = num1 < num2;
+        let isGreaterOrEqual = num1 >= num2;
+        let isLessOrEqual = num1 <= num2;
+
+        document.getElementById('isEqual').innerText = `Equal: ${isEqual}`;
+        document.getElementById('isNotEqual').innerText = `Not Equal: ${isNotEqual}`;
+        document.getElementById('isGreaterThan').innerText = `Greater Than: ${isGreaterThan}`;
+        document.getElementById('isLessThan').innerText = `Less Than: ${isLessThan}`;
+        document.getElementById('isGreaterOrEqual').innerText = `Greater Than or Equal: ${isGreaterOrEqual}`;
+        document.getElementById('isLessOrEqual').innerText = `Less Than or Equal: ${isLessOrEqual}`;
+
+        // Logical operators
+        let isTrue = true;
+        let isFalse = false;
+
+        let andOperator = isTrue && isFalse;
+        let orOperator = isTrue || isFalse;
+        let notOperator = !isTrue;
+
+        document.getElementById('andOperator').innerText = `Logical AND: ${andOperator}`;
+        document.getElementById('orOperator').innerText = `Logical OR: ${orOperator}`;
+        document.getElementById('notOperator').innerText = `Logical NOT: ${notOperator}`;
+
+        // Assignment operators
+        let x = 5;
+        x += 3;
+        document.getElementById('assignment').innerText = `Assignment (+=): ${x}`;
+
+        // Other operators
+        let string1 = "Hello";
+        let string2 = "World";
+
+        let concatOperator = string1 + " " + string2;
+        document.getElementById('concatOperator').innerText = `String Concatenation: ${concatOperator}`;
+
+        let ternaryOperator = (num1 > num2) ? "Yes" : "No";
+        document.getElementById('ternaryOperator').innerText = `Ternary Operator: ${ternaryOperator}`;
+    </script>
+</body>
+</html>
