@@ -55,11 +55,21 @@ When a web page is loaded, the browser creates a Document Object Model (DOM) of 
 
 ### **DOM Manipulation:**
   ---
-  
   Inside the DOM tree there are 3 types of nodes are available:
-+ Text nodes
-+ Comment nodes
+
+  + Text nodes
+  + Comment nodes
 + Elements node
+</br>**DOM Tree Representation**
++ <code>document</code>
+  + <code>Root Element(html)</code>
+    + <code>Element(head)</code>
+      + <code>Element(title)</code>
+    + <code>Element(body)</code>
+      + <code>Element(h1)</code>
+      + <code>Element(a)</code>
+      + <code>Element(p)</code>
+</br>
 + #### **Elements:**
   + Selecting with ID
     ```js
@@ -111,5 +121,53 @@ When a web page is loaded, the browser creates a Document Object Model (DOM) of 
 
     //Access by ID 
     document.getElementById("btn").style.background="green";
+    ```
+  + <code>node.classList.add():</code> Used to add the CSS attribute class into any node.
+    ```js
+    let myP = document.querySelector('.myP');
+    myP.classList.add("newClass");
+    ```
++ **Create Element:**
+  + <code>node.createElement(ele):</code> Create new element inside any node in JS.
+    ```js
+    let newHeading = document.createElement("h1");
+    newHeading.innerHTML = "Hi, This is Prepend";
+    ```
++ **Insert Elements:**
+  + <code>node.append(el):</code>Add the element at the end of node inside any element.
+    ```js
+    //Add new button inside the div
+    let div = document.querySelector("div");
+    div.append(newBtn);
+    ```
+  + <code>node.prepend(el):</code>Add the element at the start of node inside any element.
+    ```js
+    //Add heading inside the body
+    let newHeading = document.createElement("h1");
+    newHeading.innerHTML = "Hi, This is Prepend";
+
+    document.querySelector("body").prepend(newHeading);
+    ```
+  + <code>node.before(el):</code> Add the element before any node
+    ```js
+    //---Add element at the before of any node 
+    let newBtn = document.createElement("button");
+    newBtn.innerText = "Add Before!";
+
+    document.querySelector("div").before(newBtn);
+    ```
+  + <code>node.after(el):</code> Add the element after any node
+    ```js
+    //---Add element at the after of any node 
+    let newBtn = document.createElement("button");
+    newBtn.innerText = "Add After!";
+
+    document.querySelector("div").after(newBtn);
+    ```
++ **Delete Element:**
+  + <code>node.remove(el):</code> Used to remove any node into the javascript.
+    ```js
+    let pRem = document.querySelector("div");
+    pRem.remove();
     ```
 </details>
