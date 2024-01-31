@@ -1,0 +1,26 @@
+<!-- Qs.Create a new button element. Given it a text "click me", set some style. Then Insert the button as the first element inside the body tag. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <script>
+
+        let elem = document.createElement("button");
+        elem.innerHTML = "click me";
+        elem.style.background = "red";
+        elem.style.color = "white";
+        elem.style.border = "none";
+        elem.style.fontSize = "20px";
+        elem.style.borderRadius = "5px";
+        
+        document.querySelector('body').prepend(elem);
+
+    </script>
+</body>
+</html>

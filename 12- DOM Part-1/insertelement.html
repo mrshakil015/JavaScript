@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 100px;
+            height: auto;
+            padding: 5px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <p>This is the list</p>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ul>
+    </div>
+
+    <p id="endP">This is the end of the box.</p>
+
+    <script>
+        
+        //---Add element at the end of any node
+        let newBtn = document.createElement("button");
+        newBtn.innerText = "click me!";
+        
+        let div = document.querySelector('div');
+        div.append(newBtn);
+        
+        //---Add element at the start of any node 
+        let newHeading = document.createElement("h1");
+        newHeading.innerHTML = "Hi, This is Prepend";
+
+        document.querySelector("body").prepend(newHeading);
+        
+        //---Add element at the before of any node 
+        let newBtn2 = document.createElement("button");
+        newBtn2.innerText = "Add Before!";
+
+        document.querySelector("div").before(newBtn2);
+        
+        //---Add element at the before of any node 
+        let newBtn3 = document.createElement("button");
+        newBtn3.innerText = "Add After!";
+
+        document.querySelector("div").after(newBtn3);
+
+        let pRem = document.querySelector("#endP");
+        pRem.remove();
+        
+    </script>
+</body>
+</html>

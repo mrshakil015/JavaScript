@@ -1,0 +1,29 @@
+<!-- Qs. Create a 'p' tag in html, give it a class & some styling. Now create a new class in CSS and try to append this class to the 'p' element.
+Did you notice, how you overwrite the class name when you add a new one? Solve this problem using classList -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myP{
+            color: red;
+            font-weight: bold;
+        }
+        .newClass{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <p class="myP">This is the paragraph tag. Here I add some text.</p>    
+
+    <script>
+        let myP = document.querySelector('.myP');
+        console.log(myP);
+        myP.classList.add("newClass");
+    </script>
+</body>
+</html>
