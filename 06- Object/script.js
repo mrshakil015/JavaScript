@@ -1,15 +1,14 @@
-const car = {
-    name: "BMW",
-    model: 500,
-    weight: "800kg",
-    color: "white",
-    start: function(){
-        console.log("Car has started");
+//Function inside the object
+const myObject = {
+    //--Function written method-1
+    objFunc() {
+        console.log("This is object function.");
     },
-    drive: function(){
-        console.log("Car is driving");
+
+    //--Function written method-2
+    objFunc2: function () {
+        console.log("This is another object function.");
     },
-}
-console.log(car.color);
-console.log(car['model']);
-car.start();
+};
+console.log(myObject.objFunc());
+console.log(myObject.objFunc2());

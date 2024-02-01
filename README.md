@@ -258,3 +258,40 @@ Event listeners in JavaScript are used to respond to events that occur on HTML e
   element.removeEventListener('click', myEventHandler);
   ```
 </details>
+
+<details>
+<summary>Object in JS</summary>
+
+A JavaScript object is an entity having state and behavior (properties and method). JS objects have a special property called prototype.
+```js
+//Simple object example in js
+let person = {
+  name: "John",
+  age: 30,
+  job: "Developer"
+};
+console.log(person.name);
+```
+Function inside the object
+```js
+const myObject = {
+    //--Function written method-1
+    objFunc() {
+        console.log("This is object function.");
+    },
+    //--Function written method-2
+    objFunc2: function () {
+        console.log("This is another object function.");
+    },
+};
+console.log(myObject.objFunc());
+console.log(myObject.objFunc2());
+```
+### **Prototype:**
+In JavaScript, we can use one object's functions/ methods/ properties in another object by setting it as a prototype.
+If objects & prototype have same method, that time object's method will be used.
+```js
+firstObject.__proto__ == secondObject;
+```
+</details>
+
