@@ -295,3 +295,71 @@ firstObject.__proto__ == secondObject;
 ```
 </details>
 
+<details>
+<summary>Classes in JS</summary>
+
+Class is a program-code template for creating objects. Those objects will have some state (variables) & some behaviour (functions) inside it.
+```js
+//Structure
+class MyClass {
+  constructor() {...}
+  myMethod() {...}
+}
+
+let myObj = new MyClass();
+```
+Example:
+```js
+class ToyotaCar {
+    start() {
+        console.log("Car Start");
+    }
+    stop() {
+        console.log("Car Stop")
+    }
+}
+let fortuner = new ToyotaCar();
+console.log(fortuner.start());
+```
+
+### **Inheritance:**
+---
++ Inheritance is passing down properties & methods from parent class to child class.
++ If child & Parent have same method, childs method will be used.
+  ```js
+  //Syntax
+  class Parent {
+
+  }
+
+  class Child extends Parent {
+
+  }
+  ```
+  Example:
+
+  ```js
+  class Person {
+    eat() {
+      console.log("Eat");
+    }
+
+    slppe() {
+      console.log("Sleep");
+    }
+  }
+  //Inherite 
+  class Engineer extends Person {
+    work() {
+      console.log("Solve problems");
+    }
+  }
+  let shakilObj = new Engineer();
+  console.log(shakilObj.eat());
+  console.log(shakilObj.work());
+  ```
+
+### **Super Keyword:**
+---
+The super keyword is used to call the constructor of its parent class to access the parent's properties and methods.
+</details>
