@@ -576,3 +576,31 @@ Example:
 })();
 ```
 </details>
+
+<details>
+<summary>Fetch API</summary>
+
++ The Fetch API provides an interface for fetching (sending/receiving) responses. 
++ It uses Request and Response object. 
++ The Fetch() method is used to fetch a resource (data).
++ API stands for Appplication Programming Interface.
+
+**Syntax:**
+```js
+let promise = fetch(url,[options])
+```
+### **Understanding Terms:**
+---
++ AJAX is Asynchronous JS & XML
++ JSON is JavaScript Object Notation
++ json() method: returns a second promise that resolves with the result of parsing the response body text as JSON. (input is JSON, output is JS object).
+
+### **Requests & Response**
+---
+**Request:** A request is an action performed by a client to obtain or send data to a server. It is typically initiated by the client when it needs to retrieve information from a server or when it wants to send data to the server.
++ <code>HTTP Verb:</code> The HTTP method or verb indicates the type of operation the client wants to perform. Common HTTP methods include GET (retrieve data), POST (send data to be processed), PUT (update data), DELETE (remove data), and others.
++ <code>URL:</code> The URL specifies the address of the resource on the server that the client wants to interact with. It includes the protocol (e.g., "https://"), domain, path, and possibly query parameters.
++ <code>Headers:</code> Headers provide additional information about the request, such as the type of data the client can accept (Accept header), the format of the data it is sending (Content-Type header), and other metadata.
++ <code>Body:</code> For certain HTTP methods like POST or PUT, the client may include a message body in the request to send data to the server. The body can contain various types of data, such as JSON, form data, or binary content.
+
+</details>
