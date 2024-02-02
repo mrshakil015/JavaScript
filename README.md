@@ -421,3 +421,111 @@ getData(1, () => {
 });
 ```
 </details>
+
+<details>
+<summary>Promises</summary>
+
+Promise is for "eventual" completion of task of  task. It is an object in JS. It is a solution to callback hell. It resolve & reject are callbacks provided by JS.
+```js
+
+let myPromise = new Promise((resolve, reject) => {
+  // Perform asynchronous operation
+  if (operationIsSuccessful) {
+    resolve(result);
+  } else {
+    reject(error);
+  }
+});
+
+```
+There are three states in Promise:
++ **Pending:** This is the initial state. The promise is neither fulfilled nor rejected. It is waiting for the asynchronous operation to complete.
++ **Fulfilled/Resolved:** The asynchronous operation completed successfully, and the promise is fulfilled. Any associated data with the successful operation is passed to the fulfillment handler.
++ **Rejected:** The asynchronous operation encountered an error or was unsuccessful, and the promise is rejected. Any reason or error associated with the failure is passed to the rejection handler.
+
+**Used of Promise**
+--
++ <code>**promise.then():** </code> This method is used to attach callbacks that will be invoked when the Promise is fulfilled. 
+  ```js
+  function getPromise(){
+    return new Promise((resolve, reject) => {
+        console.log("I am a Promise");
+        resolve("Success");
+    });
+  };
+
+  let promise = getPromise();
+  promise.then(() => {
+      console.log("Promise is fullfilled");
+  });
+  ```
++ <code>**promise.catch():**</code> The catch() method is used to attach a callback that will be invoked only if the Promise is rejected. 
+  ```js
+  const getPromise2 = () => {
+    return new Promise((resolve, reject) => {
+        console.log("I am a Promise to check catch.");
+        reject("Error occured");
+    });
+  };
+  let promise2 = getPromise2();
+  promise2.catch(() => {
+      console.log("Promise is rejected");
+  });
+  ```
+### **Promise Chain:**
+---
+Promise chaining is a technique in JavaScript that involves chaining multiple promises together to handle asynchronous operations in a sequential and organized manner. 
+```js
+function asyFunc1() {
+    return new Promise((resolve, reject) =>{
+        setTimeout(() => {
+            console.log("Data 1");
+            resolve("Success");
+        }, 2000)
+    });
+};
+
+function asyFunc2() {
+    return new Promise((resolve, reject) =>{
+        setTimeout(() => {
+            console.log("Data 2");
+            resolve("Success");
+        }, 2000)
+    });
+};
+console.log("Fetching Data1");
+let promise1 = asyFunc1();
+promise1.then(() => {
+    console.log("Fetching Data2");
+    let promise2 = asyFunc2();
+    promise2.then(() => {});
+    
+})
+```
+Another Example:
+```js
+//---Chain of Promise-------
+function getData(dataId) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("Data ",dataId);
+            resolve("Success");
+        }, 2000);
+    });
+};
+
+console.log("Getting Data 1...");
+getData(1)
+.then((res) => {
+    console.log("Getting Data 2...");
+    return getData(2);
+})
+.then((res) =>{
+    console.log("Getting Data 3...");
+    return getData(3);
+})
+.then((res) => {
+    console.log(res);
+});
+```
+</details>
