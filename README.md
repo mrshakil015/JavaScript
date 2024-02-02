@@ -529,3 +529,50 @@ getData(1)
 });
 ```
 </details>
+
+<details>
+<summary>Async-Await</summary>
+async function always returns a promise. and await puses the execution of its surrounding async function until the promise is settled.
+
+```js
+function getData(dataId) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("Data ",dataId);
+            resolve("Success");
+        },2000);
+    });
+}
+//.....Async-Await......
+async function getAllData() {
+    console.log("Getting Data 1");
+    await getData(1);
+    console.log("Getting Data 2");
+    await getData(2);
+    console.log("Getting Data 3");
+    await getData(3);
+}
+getAllData();
+```
+### **IIFE:**
+---
+IIFE stands for "Immediately Invoked Function Expression." It is a JavaScript design pattern that involves defining and invoking a function immediately after its creation. After following this method we need to call any function.
+
+```js
+(function() {
+  // Your code here
+})();
+```
+Example:
+
+```js
+(async function() {
+    console.log("Getting Data 1");
+    await getData(1);
+    console.log("Getting Data 2");
+    await getData(2);
+    console.log("Getting Data 3");
+    await getData(3);
+})();
+```
+</details>
