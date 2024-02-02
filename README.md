@@ -404,4 +404,20 @@ function myDisplay(result){
 }
 myCalculator(5,6, myDisplay);
 ```
+
+### **Callback Hell/Nested Callback**
+---
+In Callback Hell, Nested callbacks stacked below one another forming a pyramid structure. This style of programming becomes difficult to understand & manage.
+
+```js
+function getData(dataId,getNextData){
+    setTimeout(() => {
+        console.log("Data",dataId);
+        if (getNextData) getNextData();
+    },2000)
+}
+getData(1, () => {
+    getData(2);
+});
+```
 </details>

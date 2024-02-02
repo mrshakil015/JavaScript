@@ -21,3 +21,14 @@ function myDisplay(result){
     console.log(result);
 }
 myCalculator(5,6, myDisplay);
+
+//-------Callback Hell/Nested Callback--------
+function getData(dataId,getNextData){
+    setTimeout(() => {
+        console.log("Data",dataId);
+        if (getNextData) getNextData();
+    },2000)
+}
+getData(1, () => {
+    getData(2);
+});
