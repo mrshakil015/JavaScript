@@ -363,3 +363,45 @@ console.log(fortuner.start());
 ---
 The super keyword is used to call the constructor of its parent class to access the parent's properties and methods.
 </details>
+
+<details>
+<summary>Synchronous</summary>
+
+Synchronous means the code runs in a particular sequence of instructions given in the program. Each instruction waits for the previous instruction to complete its execution.
+```js
+console.log("Print One");
+console.log("Print Two");
+console.log("Print Three");
+```
+</details>
+<details>
+<summary>Asynchronous</summary>
+Due to synchronous programming, sometimes imp instructions get blocked due to some previous instructions, which causes a delay in the UI. Asynchronous code execution allows to execute next instructions immediately and doesn't block the flow.
+
+```js
+console.log("Print One");
+console.log("Print Two");
+
+setTimeout(() => {
+  console.log("Hello");
+}, 4000);
+
+console.log("Print Three");
+```
+</details>
+
+<details>
+<summary>Callback</summary>
+A callback is a function passed as an argument to another function.
+
+```js
+function myCalculator(num1, num2, callback){
+    let sum = num1 + num2;
+    if(callback) callback(sum);
+}
+function myDisplay(result){
+    console.log(result);
+}
+myCalculator(5,6, myDisplay);
+```
+</details>
