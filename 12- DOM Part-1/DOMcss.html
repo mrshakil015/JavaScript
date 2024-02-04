@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM CSS</title>
+</head>
+<body>
+    <p id="myDemo">Hello World</p>
+
+    <script>
+        setTimeout(function(){
+            const p = document.querySelector('#myDemo');
+            p.style.color = "#fff";
+            p.style.fontSize = "20px";
+            p.style.backgroundColor="green";
+            p.style.padding = "5px";
+        }, 3000);
+    </script>
+    <p id="myDemo2">This is DOM CSS</p>
+    <button onclick="styling()">Change Style</button>
+    <script>
+        function styling() {
+            const p2 = document.querySelector('#myDemo2');
+            p2.style.color = 'red';
+            p2.style.fontSize = '20px';
+        }
+    </script>
+
+</body>
+</html>
