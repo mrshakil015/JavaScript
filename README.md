@@ -55,11 +55,11 @@ functionName();
   When a web page is loaded, the browser creates a Document Object Model (DOM) of the page.
 
   ### **DOM Manipulation:**
-    ---
-    Inside the DOM tree there are 3 types of nodes are available:
+  ---
+  Inside the DOM tree there are 3 types of nodes are available:
 
-    + Text nodes
-    + Comment nodes
+  + Text nodes
+  + Comment nodes
   + Elements node
   </br>**DOM Tree Representation**
   + <code>document</code>
