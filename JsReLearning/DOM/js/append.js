@@ -37,3 +37,16 @@ sectionFood.appendChild(ul);
 
 
 mainContainer.appendChild(sectionFood);
+
+
+// set innerHTML directly
+const sectionDress = document.createElement('section');
+sectionDress.innerHTML = `
+<h1>My Dress Section</h1>
+<ul>
+    <li>T-Shirt</li>
+    <li>Pangabi</li>
+    <li>Shirt</li>
+</ul>
+`
+mainContainer.appendChild(sectionDress);
