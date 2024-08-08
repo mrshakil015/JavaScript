@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of DOM</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <style>
+        .important-places{
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to my DOM</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, libero amet? Quas nostrum laudantium assumenda est similique nemo nisi cupiditate explicabo exercitationem reprehenderit praesentium non quia odit in, ipsum cumque.</p>
+    </header>
+    <main id="main-container">
+        <section>
+            <h1>My Awesome DOM de baba</h1>
+            <ul>
+                <li>Jalali Set</li>
+                <li>Shafayet</li>
+                <li>Bonobash</li>
+            </ul>
+        </section>
+        <section id="places-container">
+            <h1 id="places-title">Place I like to visit</h1>
+            <ul id="places-list">
+                <li class="important-places">Soondarban</li>
+                <li class="important-places">Bandorban</li>
+                <li class="important-places">Shalbon</li>
+                <li>Katabon</li>
+            </ul>
+        </section>
+
+        <section>
+            <h1 id="fruits-title">Fruits I like</h1>
+            <ul class="fruits-container">
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Carrot</li>
+            </ul>
+        </section>
+
+    </main>
+    
+    <script>
+        const liCollection = document.getElementsByTagName('li');
+        console.log(liCollection);
+        for (const li of liCollection) {
+            console.log(li.innerText);
+        }
+
+        //Accessing element by Id 
+        const fruitsTitleId = document.getElementById('fruits-title');
+
+        console.log(fruitsTitleId.innerText);
+        console.log(fruitsTitleId.innerText = 'My Fruits');
+
+        // Accessing element by class
+        const placeClass = document.getElementsByClassName('important-places');
+        console.log(placeClass);
+        for(const place of placeClass){
+            console.log(place.innerText);
+        }
+
+        //Accessing element by query selector
+        const someLi = document.querySelectorAll('.fruits-container li')
+        const singleQuery = document.querySelector('.fruits-container li');
+        console.log(singleQuery);
+        console.log(someLi);
+        for(const li of someLi){
+            console.log(li.innerText);
+        }
+
+        //---------- Dynamic Style--------------
+        document.getElementById('places-title').style.color = 'red';
+        document.getElementById('places-title').style.backgroundColor = 'green';
+        document.getElementById('places-title').style.borderRadius = '3px';
+        document.getElementById('places-title').style.padding = '5px';
+        document.getElementById('places-title').style.textAlign = 'center';
+
+    </script>
+    <script src="js/dom.js"></script>
+    <script src="js/styleInJs.js"></script>
+    <script src="js/append.js"></script>
+</body>
+
+</html>

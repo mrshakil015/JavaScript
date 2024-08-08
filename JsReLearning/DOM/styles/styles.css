@@ -1,0 +1,21 @@
+body{
+    padding: 0 20px;
+}
+h1 {
+    color: goldenrod;
+}
+li{
+    color: tomato;
+}
+#fruits-title{
+    color: black;
+}
+
+.text-style{
+    text-align: center;
+    font-weight: bold;
+}
+
+.text-color{
+    color: red; 
+}
