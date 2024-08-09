@@ -31,14 +31,22 @@ Find the HTML elements in 4 ways:
 + querySelector
 + querySelectorAll
 
+### What are events?
++ A special set of objects
++ Gives signal that something has occurred within a website
++ Throught Event listeners, developers run specific code as the event
++ The DOM event model consists of
+    + events
+    + event listeners
++ The DOM event model provides notifications for certain events.
 
 ### JavaScript Events:
-+ onchange
-+ onClick
-+ onMouseover
-+ onKeydown
-+ onBlur
-+ onLoad
++ onchange: A change happened to an HTML element
++ onClick: The user clicks an HTML event
++ onMouseover: The user moves away from an HTML element
++ onKeydown: The user presses a keyboard key
++ onBlur: When an object loses focus
++ onLoad: The broser has finished loading the page
 
 **Event Handeler**:<br>
 An event handler is a routine that deals with the event allowing a programmer to write code that is executed when the event occurs with the help of event attributes.
@@ -48,5 +56,7 @@ Event capturing is the enents starts from top element to the target element.
 
 **Stop Propagation:**<br>
 The stopPropagation() method of the event interface prevents further propagation of the current event in the capturing and building phases.
+**Event Delegation:**<br>
+Event Delegation is basically a pattern to handle events efficiently Instead of adding an event listner to each and every similar element, we can add an event listener to a parent element and call an event on a partifular target using the .target propery tof the event object.
 
 </details>
