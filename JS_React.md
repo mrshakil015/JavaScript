@@ -60,3 +60,35 @@ The stopPropagation() method of the event interface prevents further propagation
 Event Delegation is basically a pattern to handle events efficiently Instead of adding an event listner to each and every similar element, we can add an event listener to a parent element and call an event on a partifular target using the .target propery tof the event object.
 
 </details>
+
+<details>
+<summary>JavaScript Arrow Function</summary>
+
+Arrow function is one of the features introduced in the ES6 version of JavaScript. It allows you to create functions in a cleaner way compared to regular functions.
+
+**Ways to write Arrow Function:**
+When there is no parameters, there should be as empty paranthesis
+```js
+const myName = ()=>console.log('Md. Shakil');
+```
+Usually you don't have to use parenthesis if there is only one parameter.
+```js
+const square = a=> a*a;
+```
+Use paranthesis when there is more than one parameter.
+```js
+const add = (a,b)=> a+b;
+```
+
+```js
+const add = (a,b) => {
+
+}
+
+```
+
+**Arrow Function vs Regular Function:**
++ If there the arrow function contains one expression you can omit the curly braces, and then the expression will be implicitly returned.
++ In Regular function, you have to use return keyword to retun any value. If you don't return anything then the function return undefined.
+
+</details>
