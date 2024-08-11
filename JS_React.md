@@ -92,3 +92,21 @@ const add = (a,b) => {
 + In Regular function, you have to use return keyword to retun any value. If you don't return anything then the function return undefined.
 
 </details>
+
+<details>
+<summay>Spread Operator</summary>
+The JavaScript spread operator(...) allows us to quicky copy all or part of an existing array or object into another array or object.
+
+```js
+//Case 1:
+var a = ['Rohim','Korim', 'Jodu']; 
+console.log(a);
+//Result: ['Rohim','Korim', 'Jodu']
+
+//Case 2:
+var a = ['Rohim','Korim', 'Jodu']; 
+console.log(...a);
+//Result: Rohim Korim Jodu
+```
+
+</details>
