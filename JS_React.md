@@ -110,3 +110,15 @@ console.log(...a);
 ```
 
 </details>
+
+<details>
+<summary>Common Interview Questions</summary>
+
++ What is an api?
++ What are the HTTP methods supported by REST?
++ Can you use GET request instead of PUT or create a resource?
++ What is the difference between PUT and POST?
++ What is JSON?
++ What are CRUD operations?
+
+</details>
