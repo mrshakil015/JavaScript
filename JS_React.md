@@ -2,41 +2,87 @@
 <summary>About JavaScript</summary>
 
 JavaScript is a-
-### Highly Abstracted:
+#### Highly Abstracted:
 An abstraction is a way of 
 - hiding the implementation details
 - showing only the functionality to users
 
-### Garbage Collection
+#### Garbage Collection
 - JS automatically collects unused data
 - free the memory with the help of an algorithm called 'Mark -and - sweep
 - THe garbage collector removes all the objects except the marked ones.
 
-### JIT compiled language:
+#### JIT compiled language:
 - JIT (Just in Time)
 JS is not a purerly interpreted language
 - Modern JS is JIT compiled
 - Just-In-Time compiler converts the entir code into machine code and execute them immediately.
 
-### Multi-Paradigm Language
+#### Multi-Paradigm Language
 Paradigm: code structure that will determine the style or a way of programming
 
 -Procedural programming
 - Object-Oriented Programming
 - Functional Programming
 
-### Proto-Typed based language:
+#### Proto-Typed based language:
 - In JS, everything (function, array, objects) is object except the primitive data
 - A prototypical object is an object used as a template from which to get the initial properties for a new object.
 - Proto-type is a blue print
 
-### Dynamically Typed
+#### Dynamically Typed
 - When you declare a variable, you do not need to specify what type this variable is
 - JS engine infers what type this variable is based on the value assigned to at run time.
 - As JS determines the type at runtime we can re-declare the type
 
 
+## Execution Context
+- An execution context is an environment
+- Inside the execution context a piece of JS code gets executed.
+- Variables, parameters and other information related to the piece of code get stored in the execution context.
 
+There are two kinds of Execution COntext in Javascript:
+- Global Execution Context (GEC)
+- Functional Execution Context (FEC)
+
+#### Global Execution Context:
+Whenever the JS engine receives a script file, it first create a default Execution Context known as the global execution context(gec).
+- GEC is the base/default Execution Context
+All JS code that is not inside of a function gets executed.
+- For every JS file, there can only be one GEC.
+
+
+## Single-Threaded
+JavaScript is a single-threaded and synchronous language
+- Single-threaded means oly one statement is executed at a time.
+- JavaScript only hase on e call stack.
+- JavaScript runs code line by line.
+- Must finish executing a piece of code before moving onto the next.
+
+## Promise
+The promise object represents the eventual completion(or failur) of an asynchronous operation and its resulting value. A Promise is in one of these states:
+
+- Pending: initial state, neither fulfilled nor rejected
+- Resolve: the operation was completed successfully.
+- Reject: the operation failed
+
+## Fetch API
+- The fetch() method starts the process of fetching a resource from a server.
+- The fetch() method return a Promise that resolves to a Response object
+- A fetch() method only rejects when a netwrok error is encountered.
+
+
+## Async/Await
+- `async/await` is a special systax to work with promises in a more confortable way.
+- It's surprisingly easy to understand and use.
+- The await keywoard can only be used inside an async function
+- The await keyword makes the function puse the execution and
+- wait for a resolved promise before it continues
+
+
+## setTimeout() vs setInterval()
+- setTimeout(): A time event function to call another function after certain time period but executes the function only once.
+- setInterval(): Same as setTimeout() with a slice difference that the execution of the function occurs continuously according to the specified time interval. Here, the time interval works like a gap between the executions.
 
 </details>
 
