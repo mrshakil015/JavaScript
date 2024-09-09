@@ -32,7 +32,6 @@ const displayPhones = (phones,isShowAll) =>{
     }
 
     phones.forEach(phone => {
-        // console.log(phone);
         // 2. Create a div
         const phoneCard = document.createElement('div');
         phoneCard.classList = `card bg-gray-100 p-4 shadow-xl`;
@@ -41,13 +40,13 @@ const displayPhones = (phones,isShowAll) =>{
         phoneCard.innerHTML = `
         <figure>
         <img src="${phone.image}"
-            alt="Shoes" />
+            alt="phone" />
         </figure>
-        <div class="card-body">
-            <h2 class="card-title">${phone.phone_name}</h2>
+        <div class="card-body text-gray-950">
+            <h2 class="card-title font-black">${phone.phone_name}</h2>
             <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div class="card-actions justify-end">
-                <button class="btn btn-primary">Buy Now</button>
+            <div class="card-actions justify-center">
+                <button onclick="handleShowDetails('${phone.slug}')" class="btn btn-primary">Show Details</button>
             </div>
         </div>
         `
@@ -59,6 +58,35 @@ const displayPhones = (phones,isShowAll) =>{
     // hide loading spinner
     toggleLoadingSpinner(false);
     
+}
+
+const handleShowDetails = async (id) =>{
+    const res = await fetch(`https://openapi.programming-hero.com/api/phone/${id}`);
+    const data = await res.json();
+    const phone = data.data;
+    showPhoneDetails(phone);
+}
+
+// show phone details
+const showPhoneDetails = (phone) =>{
+    console.log(phone);
+    const PhoneName = document.getElementById('phone-name');
+    PhoneName.innerText = phone.name;
+
+    const showDetailsContainer = document.getElementById('show-details-container');
+    showDetailsContainer.innerHTML = `
+    <figure>
+    <img src="${phone.image}"
+        alt="phone" />
+    </figure>
+    <p><span class="font-bold">Storage:</span>${phone?.mainFeatures?.storage}</p>
+    <p><span class="font-bold">Display Size:</span>${phone?.mainFeatures?.displaySize}</p>
+    <p><span class="font-bold">ChipSet:</span>${phone?.mainFeatures?.chipSet}</p>
+    <p><span class="font-bold">Memory:</span>${phone?.mainFeatures?.memory}</p>
+    <p><span class="font-bold">GPS:</span>${phone?.others?.GPS || 'No GPS'}</p>
+    `
+    // show the modal
+    show_details_modal.showModal();
 }
 
 // Handle search button
