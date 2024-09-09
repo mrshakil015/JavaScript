@@ -1,4 +1,47 @@
 <details>
+<summary>About JavaScript</summary>
+
+JavaScript is a-
+### Highly Abstracted:
+An abstraction is a way of 
+- hiding the implementation details
+- showing only the functionality to users
+
+### Garbage Collection
+- JS automatically collects unused data
+- free the memory with the help of an algorithm called 'Mark -and - sweep
+- THe garbage collector removes all the objects except the marked ones.
+
+### JIT compiled language:
+- JIT (Just in Time)
+JS is not a purerly interpreted language
+- Modern JS is JIT compiled
+- Just-In-Time compiler converts the entir code into machine code and execute them immediately.
+
+### Multi-Paradigm Language
+Paradigm: code structure that will determine the style or a way of programming
+
+-Procedural programming
+- Object-Oriented Programming
+- Functional Programming
+
+### Proto-Typed based language:
+- In JS, everything (function, array, objects) is object except the primitive data
+- A prototypical object is an object used as a template from which to get the initial properties for a new object.
+- Proto-type is a blue print
+
+### Dynamically Typed
+- When you declare a variable, you do not need to specify what type this variable is
+- JS engine infers what type this variable is based on the value assigned to at run time.
+- As JS determines the type at runtime we can re-declare the type
+
+
+
+
+</details>
+
+
+<details>
 <summary>DOM - Document Object Model</summary>
 
 DOM Defines:
