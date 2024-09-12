@@ -84,6 +84,16 @@ The promise object represents the eventual completion(or failur) of an asynchron
 - setTimeout(): A time event function to call another function after certain time period but executes the function only once.
 - setInterval(): Same as setTimeout() with a slice difference that the execution of the function occurs continuously according to the specified time interval. Here, the time interval works like a gap between the executions.
 
+## LocalStorage:
+- localStorage.getItem()
+- localStorage.setItem()
+- localStorage.removeItem()
+- localStorage.clear()
+- localStorage.length()
+
+* In local Storage every value store as a string. In localStorage directly we cannot store an Object we need to convert this object into string.
+* For convert into string we cannot used toString(). Using JSON.stringify() we can easily convert any object into the string.
+
 </details>
 
 
