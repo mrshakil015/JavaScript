@@ -96,6 +96,60 @@ The promise object represents the eventual completion(or failur) of an asynchron
 
 </details>
 
+<details>
+<summary>JavaScript ES6 Features</summary>
+
+- Arrow Function: It provides a concise syntax for writing functions, especially useful for short,one-line operations.
+    ```js
+    //ES5 function
+    function add(x,y) {
+        return x+y;
+    }
+
+    //ES6 function
+    function add = (x,y) => x+y;
+    ```
+- **Template Literals:** It allow embedding expressions inside strings, providing a cleaner and more readable way to concatenate strings.
+    ```js
+    const name = "John";
+    const gretting =   `Hello, ${name}!`;
+    console.log(greatting);
+
+    //result- Hello, John
+    ```
+- **Destructuring Assessment:** It simplifies the extraction of values from objects or arrays into individual variables.
+    ```js
+    const person = {name: "Alice", age:25};
+
+    //Extracting properties
+    const {name, age} = person;
+    console.log("Name :", name, "Age: ", age);
+    //result- Name Alice Age: 25
+    ```
+- **Spred Operator:** The spread operator allows for the expansionof elements making it handy for creating new arrays or objects based on existing ones.
+    ```js
+    const numbers = [1,2,3];
+    const newNumbers = [...numbers, 4,5];
+
+    console.log("newNumbers : ", newNumbers);
+    //result: [1,2,3,4,5]
+    ```
+- **Async/Await:** Async/await is a syntax for handling a asynchronous code more consisely, providing a cleaner alternative to working with Promise.
+    ```js
+    const API = "https://api.example.com";
+    const fetchData = async () => {
+        try {
+            const result = await fetch(`${API}/data`);
+            const data = await result.json();
+            console.log(data);
+        }catch (error) {
+            console.log(error);
+        }
+    };
+    ```
+
+</details>
+
 
 <details>
 <summary>DOM - Document Object Model</summary>
